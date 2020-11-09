@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {v1 as uuid} from 'uuid';
+import './add.css';
 
 export default class Add extends Component{
 

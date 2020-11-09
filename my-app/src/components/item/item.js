@@ -18,9 +18,9 @@ export default class Item extends React.Component{
             <div>
             <li className='list-group-item'>
                 <div className='handle'>
-                    <a href='#1' onClick={()=>{this.delete(id)}}>delete</a>
+                    <a className="btn btn-default btn-xs" href='#1' onClick={()=>{this.delete(id)}}>delete</a>
                 </div>
-                <p className='user'>{name}<span></span></p>
+                <p className='user'>{name}:<span></span></p>
                 <p className='centence'>{content}</p>
             </li>
         </div>

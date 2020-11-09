@@ -1,0 +1,13 @@
+.form-horizontal{
+    position: relative;
+    top:50px;
+}
+
+.form-horizontal>:first-child{
+    position: relative;
+    top:-22px;
+}
+
+label{
+    font-size: 2rem;
+}

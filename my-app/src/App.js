@@ -43,7 +43,7 @@ class App extends React.Component{
     let {comments} = this.state
     return (
         <div>
-          <header className='site-header'>
+          <header className='jumbotron'>
             <div className='container'>
               <div className='row'>
                 <div className='col-md-12'>
