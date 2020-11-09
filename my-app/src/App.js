@@ -4,7 +4,24 @@ import List from './components/list/list';
 import './App.css';
 
 class App extends React.Component{
+  state = {
+    comments: [{
+      id:'adsdq3w123',
+      name: 'tom',
+      content: 'good'
+    }, {
+      id:'adsdq3w1fg3',
+      name: 'jim',
+      content: 'good'
+    }, {
+      id:'adasdqwtttw123',
+      name: 'tt',
+      content: 'good'
+    }]
+  }
+
   render(){
+    let {comments} = this.state
     return (
         <div>
           <header className='site-header'>
@@ -18,7 +35,7 @@ class App extends React.Component{
           </header>
           <div className='container'>
             <Add/>
-            <List/>
+            <List comments={comments}/>
           </div>
         </div>
       )
