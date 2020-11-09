@@ -4,7 +4,7 @@ import Item from '../item/item'
 
 export default class List extends React.Component{
     render(){
-        let {comments} = this.props;
+        let {comments,deleteComment} = this.props;
         return(
             <div className='col-md-8'>
                 <h3 className='reply'>Reply:</h3>
@@ -13,7 +13,7 @@ export default class List extends React.Component{
                    {
                        comments.map((item)=>{
                         //if you have so many keys, then doing {...item}
-                        return <Item key={item.id} {...item}/>
+                        return <Item key={item.id} {...item} deleteComment={deleteComment}/>
                        })
                    }
                 </ul>
