@@ -20,6 +20,25 @@ class App extends React.Component{
     }]
   }
 
+  addComment = (commentObj)=>{
+    //state cant modify date directly；2，cant update data directly
+
+    //1. get initil state
+    let comments = [...this.state.comments];
+    comments.unshift(commentObj);
+    this.setState({comments})
+  }
+
+  deleteComment = (id)=>{
+    //1 get initial state
+    let {comments} = this.state;
+    //get id and delete id
+    let a = comments.filter((item)=>{
+      return item.id !== id
+    })
+    this.setState({comments:a})
+  }
+
   render(){
     let {comments} = this.state
     return (
@@ -34,8 +53,8 @@ class App extends React.Component{
             </div>
           </header>
           <div className='container'>
-            <Add/>
-            <List comments={comments}/>
+            <Add addComment={this.addComment}/>
+            <List comments={comments} deleteComment={this.deleteComment}/>
           </div>
         </div>
       )
