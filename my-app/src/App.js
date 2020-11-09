@@ -1,6 +1,7 @@
 import React from 'react';
 import Add from './components/add/add';
 import List from './components/list/list';
+import Link from './components/link/link';
 import './App.css';
 
 class App extends React.Component{
@@ -55,6 +56,9 @@ class App extends React.Component{
           <div className='container'>
             <Add addComment={this.addComment}/>
             <List comments={comments} deleteComment={this.deleteComment}/>
+          </div>
+          <div className='container'>
+            <Link/>
           </div>
         </div>
       )
