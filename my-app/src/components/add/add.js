@@ -3,7 +3,7 @@ import React, {Component} from 'react'
 export default class Add extends Component{
     render(){
        return(
-          <div>
+          <div className='col-md-4'>
             <form className='form-horizontal'>
                <div className='form-group'>
                   <label>UserName</label>
